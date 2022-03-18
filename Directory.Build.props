@@ -25,6 +25,12 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <!-- Controls the version of packages from opensearch-net-abstractions -->
+    <!-- *-* means most recent package, including pre-release, will be used. -->
+    <OSNetAbstractionsNuGetVersion>*-*</OSNetAbstractionsNuGetVersion>
+  </PropertyGroup>
+  
+  <PropertyGroup>
     <LangVersion>latest</LangVersion>
     <!-- Default Version numbers -->
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
