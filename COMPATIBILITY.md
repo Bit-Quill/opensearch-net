@@ -19,11 +19,8 @@ The below matrix shows the compatibility of the [`opensearch-net`](https://www.n
 | 1.3.1 | 1.0.0 |
 | 1.3.2 | 1.0.0 |
 | 1.3.3 | 1.0.0 |
-| 2.0.0 | 2.0.0 |
-| 2.0.1 | 2.0.0 |
-
-
-The client is also fully compatible with [`OpenDistro`](https://opendistro.github.io/for-elasticsearch/) 1.13.x.
+| 2.0.0 | 1.0.0 |
+| 2.0.1 | 1.0.0 |
 
 ## Upgrading
 
