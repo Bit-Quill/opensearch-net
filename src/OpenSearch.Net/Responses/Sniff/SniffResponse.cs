@@ -116,6 +116,8 @@ namespace OpenSearch.Net
 		internal bool IngestEnabled => roles?.Contains("ingest") ?? false;
 
 		internal bool ClusterManagerEligible => (roles == null ? false : roles.Contains("master") || roles.Contains("cluster_manager"));
+		[Obsolete("Use ClusterManagerEligible instead", false)]
+		internal bool MasterEligible => ClusterManagerEligible;
 	}
 
 	internal class NodeInfoHttp
