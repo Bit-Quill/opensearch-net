@@ -22,6 +22,7 @@ jobs:
     name: Unit
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
@@ -39,8 +40,12 @@ jobs:
 
       - run: dotnet nuget locals all --clear
         name: Clear nuget cache
-      - run: ./build.sh test --report
-        name: Test
+      - name: Test
+        if: ${{ matrix.version == 'windows-latest' }}
+        run: build.bat test --report
+      - name: Test
+        if: ${{ matrix.version != 'windows-latest' }}
+        run: ./build.sh test --report
       - name: Test Results
         if: always()
         uses: mikepenz/action-junit-report@v2
@@ -79,8 +84,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nuget-
 
-      - run: ./build.sh canary --report
-        name: Test
+      - name: Test
+        if: ${{ matrix.version == 'windows-latest' }}
+        run: build.bat canary --report
+      - name: Test
+        if: ${{ matrix.version != 'windows-latest' }}
+        run: ./build.sh canary --report
       - name: Test Results
         if: always()
         uses: mikepenz/action-junit-report@v2
