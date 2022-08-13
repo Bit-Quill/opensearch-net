@@ -5,12 +5,13 @@ on: [push, pull_request]
 jobs:
   integration-opensearch:
     name: Integration OpenSearch
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     env:
       plugins-directory: /tmp/opensearch-plugins
     strategy:
       fail-fast: false
       matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
         # 1.0.1 is skipped because it doesn't have a tag in OpenSearch repo, we can't check out to compile plugins
         version: [1.3.1, 1.3.0, 1.2.4, 1.2.3, 1.2.2, 1.2.1, 1.2.0, 1.1.0, 1.0.0]
 

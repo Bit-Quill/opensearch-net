@@ -20,7 +20,10 @@ on:
 jobs:
   unit-tests:
     name: Unit
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -59,8 +62,10 @@ jobs:
   # Packages nuget packages first and then uses the nuget packages to test
   # Also builds versioned nuget packages
   canary-tests:
-    name: Canary
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
