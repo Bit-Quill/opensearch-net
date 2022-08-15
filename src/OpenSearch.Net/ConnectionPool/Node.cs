@@ -77,7 +77,14 @@ namespace OpenSearch.Net
 		/// <summary>Indicates whether this node is cluster_manager eligible, defaults to true when unknown/unspecified</summary>
 		public bool ClusterManagerEligible { get; set; }
 
+		/// <summary> Renamed to <see cref="ClusterManagerEligible"/> as of OpenSearch 2.0</summary>
+		[Obsolete("Use ClusterManagerEligible instead", false)]
+		public bool MasterEligible { get => ClusterManagerEligible; set => ClusterManagerEligible = value; }
+
 		public bool ClusterManagerOnlyNode => ClusterManagerEligible && !HoldsData;
+
+		[Obsolete("Use ClusterManagerOnlyNode instead", false)]
+		public bool MasterOnlyNode => ClusterManagerOnlyNode;
 
 		/// <summary>The name of the node, defaults to null when unknown/unspecified</summary>
 		public string Name { get; set; }
