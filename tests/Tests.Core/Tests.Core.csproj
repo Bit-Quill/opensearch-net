@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <DebugSymbols>True</DebugSymbols>
@@ -9,7 +9,7 @@
     <PackageReference Include="OpenSearch.Client.JsonNetSerializer" Version="$(TestPackageVersion)" />
   </ItemGroup>
   <ItemGroup Condition="'$(TestPackageVersion)'==''">
-    <ProjectReference Include="$(SolutionRoot)\src\OpenSearch.Client.JsonNetSerializer\OpenSearch.Client.JsonNetSerializer.csproj" />
+    <PackageReference Include="OpenSearch.Client.JsonNetSerializer" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(SolutionRoot)\tests\Tests.Domain\Tests.Domain.csproj" />

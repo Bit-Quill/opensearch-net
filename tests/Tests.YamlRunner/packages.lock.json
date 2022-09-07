@@ -31,16 +31,24 @@
         "type": "Direct",
         "requested": "[1.0.0-preview.2, )",
         "resolved": "1.0.0-preview.2",
-        "contentHash": "m+pJPEO7HyXvrOna5Sr3s77ewXonjYWJTNL6drh8xACnMNxnlqUDKx9HfGeSE9wmfY0lQwppaeZpFTPGaH7kZg==",
-        "dependencies": {
-          "Microsoft.NETFramework.ReferenceAssemblies.net461": "1.0.0-preview.2"
-        }
+        "contentHash": "m+pJPEO7HyXvrOna5Sr3s77ewXonjYWJTNL6drh8xACnMNxnlqUDKx9HfGeSE9wmfY0lQwppaeZpFTPGaH7kZg=="
       },
       "Newtonsoft.Json": {
         "type": "Direct",
         "requested": "[13.0.1, )",
         "resolved": "13.0.1",
         "contentHash": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A=="
+      },
+      "OpenSearch.Net": {
+        "type": "Direct",
+        "requested": "[1.1.0, )",
+        "resolved": "1.1.0",
+        "contentHash": "NiDScg2ETXVUIiDmz4Yyx2DNTal22XH6fSTC6WRLWOxH6T0c7PYnB9ZlMzmew4YPQmvuOjhgQs7V1o41+sP50g==",
+        "dependencies": {
+          "Microsoft.CSharp": "4.6.0",
+          "System.Buffers": "4.5.1",
+          "System.Diagnostics.DiagnosticSource": "5.0.0"
+        }
       },
       "SemanticVersioning": {
         "type": "Direct",
@@ -80,11 +88,6 @@
         "type": "Transitive",
         "resolved": "1.1.0",
         "contentHash": "aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg=="
-      },
-      "Microsoft.NETFramework.ReferenceAssemblies.net461": {
-        "type": "Transitive",
-        "resolved": "1.0.0-preview.2",
-        "contentHash": "59D9ISjzCpfHG41r5x4BNZNNOCmE2o5YX8vcdOwsqfxOA0+6vQnxZrYq8KtthUU2JSvC13g941rSr5GRaNQOJg=="
       },
       "System.Buffers": {
         "type": "Transitive",
@@ -272,14 +275,6 @@
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
-        }
-      },
-      "opensearch.net": {
-        "type": "Project",
-        "dependencies": {
-          "Microsoft.CSharp": "4.6.0",
-          "System.Buffers": "4.5.1",
-          "System.Diagnostics.DiagnosticSource": "5.0.0"
         }
       }
     }

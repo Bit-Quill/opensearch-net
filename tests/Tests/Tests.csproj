@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -11,7 +11,7 @@
     <PackageReference Include="OpenSearch.Net.VirtualizedCluster" Version="$(TestPackageVersion)" />
   </ItemGroup>
   <ItemGroup Condition="'$(TestPackageVersion)'==''">
-    <ProjectReference Include="$(SolutionRoot)\src\OpenSearch.Net.VirtualizedCluster\OpenSearch.Net.VirtualizedCluster.csproj" />
+    <PackageReference Include="OpenSearch.Net.VirtualizedCluster" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(SolutionRoot)\tests\Tests.Core\Tests.Core.csproj" />

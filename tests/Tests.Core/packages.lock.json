@@ -27,19 +27,13 @@
         "type": "Direct",
         "requested": "[16.5.0, )",
         "resolved": "16.5.0",
-        "contentHash": "yHZOhVSPuGqgHi+KhHiAZqNY08avkQraXKvgKgDU8c/ztmGzw7gmukkv49EaTq6T3xmp4XroWk3gAlbJHMxl8w==",
-        "dependencies": {
-          "Microsoft.CodeCoverage": "16.5.0"
-        }
+        "contentHash": "yHZOhVSPuGqgHi+KhHiAZqNY08avkQraXKvgKgDU8c/ztmGzw7gmukkv49EaTq6T3xmp4XroWk3gAlbJHMxl8w=="
       },
       "Microsoft.NETFramework.ReferenceAssemblies": {
         "type": "Direct",
         "requested": "[1.0.0-preview.2, )",
         "resolved": "1.0.0-preview.2",
-        "contentHash": "m+pJPEO7HyXvrOna5Sr3s77ewXonjYWJTNL6drh8xACnMNxnlqUDKx9HfGeSE9wmfY0lQwppaeZpFTPGaH7kZg==",
-        "dependencies": {
-          "Microsoft.NETFramework.ReferenceAssemblies.net461": "1.0.0-preview.2"
-        }
+        "contentHash": "m+pJPEO7HyXvrOna5Sr3s77ewXonjYWJTNL6drh8xACnMNxnlqUDKx9HfGeSE9wmfY0lQwppaeZpFTPGaH7kZg=="
       },
       "NETStandard.Library": {
         "type": "Direct",
@@ -57,6 +51,16 @@
         "contentHash": "11Cklf+kZ1JS+l3CRZaWQaQHmRm0Je/iIrci6bwY5c9/QXrCuYgWe/A2w0G1eYe33QU5sgUmds48Y7HQFK89mw==",
         "dependencies": {
           "Microsoft.TestPlatform.ObjectModel": "15.8.0"
+        }
+      },
+      "OpenSearch.Client.JsonNetSerializer": {
+        "type": "Direct",
+        "requested": "[1.1.0, )",
+        "resolved": "1.1.0",
+        "contentHash": "A0ukdVGMXFgWYnq+403fCx/H/G+GiKOOVmhzxkDd/S9R3rlKjD2/N5bcAd3+X8xU590GiN8+8oLxpw2A6JYf5g==",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
+          "OpenSearch.Client": "1.1.0"
         }
       },
       "Proc": {
@@ -93,11 +97,6 @@
           "System.Threading.Tasks.Extensions": "4.5.4"
         }
       },
-      "Microsoft.CodeCoverage": {
-        "type": "Transitive",
-        "resolved": "16.5.0",
-        "contentHash": "PM5YLtyN45EyUGePJpaNogndlaQPrMgQQXHKMhMESC6KfSVvt+j7+dxBi8NYC6X6dZVysf7ngwhSW3wwvPJRSQ=="
-      },
       "Microsoft.CSharp": {
         "type": "Transitive",
         "resolved": "4.6.0",
@@ -112,11 +111,6 @@
         "type": "Transitive",
         "resolved": "1.1.0",
         "contentHash": "aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg=="
-      },
-      "Microsoft.NETFramework.ReferenceAssemblies.net461": {
-        "type": "Transitive",
-        "resolved": "1.0.0-preview.2",
-        "contentHash": "59D9ISjzCpfHG41r5x4BNZNNOCmE2o5YX8vcdOwsqfxOA0+6vQnxZrYq8KtthUU2JSvC13g941rSr5GRaNQOJg=="
       },
       "Microsoft.TestPlatform.ObjectModel": {
         "type": "Transitive",
@@ -168,6 +162,26 @@
         "type": "Transitive",
         "resolved": "13.0.1",
         "contentHash": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A=="
+      },
+      "OpenSearch.Client": {
+        "type": "Transitive",
+        "resolved": "1.1.0",
+        "contentHash": "7WZWSUJOC9V6EKVbw83qd4COpyTGVFk15NXE9clXAZ5mKHh47VeoxVWmaRMD2x4o3tm6I0V/wd3vjqqBJF6ahg==",
+        "dependencies": {
+          "OpenSearch.Net": "1.1.0"
+        }
+      },
+      "OpenSearch.Net": {
+        "type": "Transitive",
+        "resolved": "1.1.0",
+        "contentHash": "NiDScg2ETXVUIiDmz4Yyx2DNTal22XH6fSTC6WRLWOxH6T0c7PYnB9ZlMzmew4YPQmvuOjhgQs7V1o41+sP50g==",
+        "dependencies": {
+          "Microsoft.CSharp": "4.6.0",
+          "System.Buffers": "4.5.1",
+          "System.Diagnostics.DiagnosticSource": "5.0.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit.Lightweight": "4.3.0"
+        }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl": {
         "type": "Transitive",
@@ -1275,29 +1289,6 @@
           "xunit.extensibility.core": "[2.4.2]"
         }
       },
-      "opensearch.client": {
-        "type": "Project",
-        "dependencies": {
-          "OpenSearch.Net": "1.0.0"
-        }
-      },
-      "opensearch.client.jsonnetserializer": {
-        "type": "Project",
-        "dependencies": {
-          "Newtonsoft.Json": "13.0.1",
-          "OpenSearch.Client": "1.0.0"
-        }
-      },
-      "opensearch.net": {
-        "type": "Project",
-        "dependencies": {
-          "Microsoft.CSharp": "4.6.0",
-          "System.Buffers": "4.5.1",
-          "System.Diagnostics.DiagnosticSource": "5.0.0",
-          "System.Reflection.Emit": "4.3.0",
-          "System.Reflection.Emit.Lightweight": "4.3.0"
-        }
-      },
       "opensearch.opensearch.ephemeral": {
         "type": "Project",
         "dependencies": {
@@ -1340,7 +1331,7 @@
         "dependencies": {
           "Bogus": "22.1.2",
           "Newtonsoft.Json": "13.0.1",
-          "OpenSearch.Client": "1.0.0",
+          "OpenSearch.Client": "1.1.0",
           "OpenSearch.OpenSearch.Managed": "1.0.0",
           "Tests.Configuration": "1.0.0"
         }
